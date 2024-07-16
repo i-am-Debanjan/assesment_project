@@ -100,7 +100,7 @@ class EmployeeController extends Controller
         ]);
 
         try {
-            // Create and save the Company model
+            // Create and save the employee model
             $employee = Employee::findOrFail($id);
             $employee->first_name = $request->first_name;
             $employee->last_name = $request->last_name;
@@ -135,11 +135,11 @@ class EmployeeController extends Controller
     }
     public function restoreEmp($employeeId)
     {
-        // Find the soft-deleted company by its ID
+        // Find the soft-deleted employee by its ID
         $employee = Employee::withTrashed()->find($employeeId);
 
         if (!$employee) {
-            // Handle case where company with given ID doesn't exist or isn't soft-deleted
+            // Handle case where employee with given ID doesn't exist or isn't soft-deleted
             return redirect()->back()->with('error', 'Employee not found or not soft-deleted.');
         }
 
