@@ -28,8 +28,13 @@ Install dependencies
 
 ```bash
 composer update
-Run Database Migrations
+```
 
+Generate Application Key
+```bash
+php artisan key:generate
+```
+Run Database Migrations
 ```bash
 php artisan migrate
 ```
@@ -38,13 +43,20 @@ Seed the database
 ```bash
 php artisan db:seed
 ```
-Seed the database
+Link storage 
 ```bash
-php artisan db:seed
+php artisan storage:link
+```
+Install NPM Dependencies
+```bash
+npm install
+```
+Build Prject and asset
+```bash
+npm run build
 ```
 
 Start the server
-
 ```bash
 php artisan serve
 ```
