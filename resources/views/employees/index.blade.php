@@ -24,11 +24,11 @@
                         <table class="w-full bg-white text-center">
                             <thead class="bg-gray-800 text-white">
                                 <tr>
-                                    <th class="w-1/4 py-2">Name</th>
-                                    <th class="w-1/4 py-2">Email</th>
-                                    <th class="w-1/4 py-2">Phone</th>
-                                    <th class="w-1/4 py-2">Company name</th>
-                                    <th class="w-1/4 py-2">Action</th>
+                                    <th class=" py-2">Name</th>
+                                    <th class=" py-2">Email</th>
+                                    <th class=" py-2">Phone</th>
+                                    <th class=" py-2">Company name</th>
+                                    <th class=" py-2">Action</th>
 
                                 </tr>
                             </thead>

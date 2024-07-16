@@ -24,11 +24,11 @@
                         <table class="w-full bg-white">
                             <thead class="bg-gray-800 text-white">
                                 <tr>
-                                    <th class="w-1/4 py-2">Name</th>
-                                    <th class="w-1/4 py-2">Email</th>
-                                    <th class="w-1/4 py-2">Logo</th>
-                                    <th class="w-1/4 py-2">Website</th>
-                                    <th class="w-1/4 py-2">Action</th>
+                                    <th class="py-2">Name</th>
+                                    <th class="py-2">Email</th>
+                                    <th class="py-2">Logo</th>
+                                    <th class="py-2">Website</th>
+                                    <th class="py-2">Action</th>
                                 </tr>
                             </thead>
                             <tbody class="text-gray-700 text-center">
@@ -40,8 +40,7 @@
                                     @foreach ($companies as $company)
                                         <tr>
                                             <td class="border px-4 py-2">{{ $company->name ? $company->name : 'N/A' }}</td>
-                                            <td class="border px-4 py-2">{{ $company->email ? $company->email : 'N/A' }}
-                                            </td>
+                                            <td class="border px-4 py-2">{{ $company->email ? $company->email : 'N/A' }}</td>
                                             <td class="border px-4 py-2">
                                                 @if ($company->logo)
                                                     <img src="{{ Storage::url($company->logo) }}" alt="Logo"
@@ -52,7 +51,7 @@
                                                     class="text-blue-500"
                                                     target="_blank">{{ $company->website ? $company->website : 'N/A' }}</a>
                                             </td>
-                                            <td class="border px-4 py-2">
+                                            <td class="border px-4 py-2 flext justify-center">
                                                 <a href="{{ route('companies.edit', $company->id) }}" class="">
                                                     <x-primary-button class="ms-3">
                                                         {{ __('Edit') }}
